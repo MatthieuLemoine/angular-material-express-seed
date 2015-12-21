@@ -48,6 +48,9 @@ To use Livereload you need to install the Livereload extension for your browser.
 This seed uses babel to enable browser ES6 support.
 To use AMES with ES6 you need to use the ES6 branch.
 
+    git clone -b es6 git@github.com:/MatthieuLemoine/angular-material-express-seed.git
+
+
 ## John Papa compliance
 
 For references : [angular-styleguide](https://github.com/johnpapa/angular-styleguide)
