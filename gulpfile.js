@@ -6,8 +6,12 @@ var sass       = require('gulp-sass');
 var minifyCss  = require('gulp-minify-css');
 var rename     = require('gulp-rename');
 var livereload = require('gulp-livereload');
+var babel      = require("gulp-babel");
+var plumber    = require("gulp-plumber");
 
 var config = {
+    es6: ['./public/es6/**/*.js'],
+    js:'./public/js/',
     scripts : [
         './public/js/**/*.module.js',
         './public/js/**/*.js'
@@ -40,6 +44,7 @@ gulp.task('watch', function(){
     livereload.listen();
     gulp.watch(config.scripts, ['js']);
     gulp.watch(config.sass, ['sass']);
+    gulp.watch(config.es6, ['babel']);
     gulp.watch(config.html).on('change',function(file){
       livereload.changed(file);
     });
@@ -59,4 +64,11 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
-gulp.task('default', ['sass','js','watch']);
+gulp.task('babel', function () {
+  return gulp.src(config.es6)
+    .pipe(plumber())
+    .pipe(babel())
+    .pipe(gulp.dest(config.js));
+});
+
+gulp.task('default', ['sass','js','babel','watch']);
