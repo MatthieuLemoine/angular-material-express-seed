@@ -23,7 +23,13 @@ Gulp is required to build AMES :
 
 ## Install
 
-    npm install
+Clone the repository :
+
+    git clone git@github.com:/MatthieuLemoine/angular-material-express-seed.git
+
+Install the dependencies :
+
+    cd angular-material-express-seed && npm install
 
 ## Run
 
@@ -36,6 +42,11 @@ Gulp is required to build AMES :
 Gulp builds sass, js files and watch for changes in it and in .html files.
 
 To use Livereload you need to install the Livereload extension for your browser.
+
+## ES6 Support
+
+This seed uses babel to enable browser ES6 support.
+To use AMES with ES6 you need to use the ES6 branch.
 
 ## John Papa compliance
 
@@ -64,13 +75,11 @@ Defer Controller Logic to Services
 
 ## References
 
-<ul>
-    <li>[Angular](https://angularjs.org/)</li>
-    <li>[Angular Material](https://material.angularjs.org/latest/)</li>
-    <li>[Gulp](http://gulpjs.com/)</li>
-    <li>[Livereload](http://livereload.com/)</li>
-    <li>[Express](http://expressjs.com/en/index.html)</li>
-    <li>[SASS](http://sass-lang.com/)</li>
-    <li>[ES6](http://es6-features.org/)</li>
-    <li>[John Papa angular-styleguide](https://github.com/johnpapa/angular-styleguide)</li>
-</ul>
+[Angular](https://angularjs.org/)<br>
+[Angular Material](https://material.angularjs.org/latest/)<br>
+[Gulp](http://gulpjs.com/)<br>
+[Livereload](http://livereload.com/)<br>
+[Express](http://expressjs.com/en/index.html)<br>
+[SASS](http://sass-lang.com/)<br>
+[ES6](http://es6-features.org/)<br>
+[John Papa angular-styleguide](https://github.com/johnpapa/angular-styleguide)<br>
